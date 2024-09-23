@@ -56,6 +56,9 @@ if(message.includes("hello")||message.includes("hey")){
 else if(message.includes("who are you")||message.includes("hu r u")){
   speak("I am Virtual Assistant, created by Ayush Tiwari Sir")
 }
+else if(message.includes("who is ayush")||message.includes("hu is ayush")||message.includes("who is ayush tiwari")){
+  speak("ayush is my father who has created me.")
+}
 else if(message.includes("open the Youtube")||message.includes("Hey sirri open the Youtube")||message.includes("open D Youtube")){
   speak("opening Youtube...")
   window.open("https://youtube.com/","_blank")
