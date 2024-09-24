@@ -51,7 +51,7 @@ btn.addEventListener("click",()=>{
 function takeCommand(message){
    btn.style.display='flex'
   voice.style.display='none'
-if(message.includes("hello")||message.includes("hello siri")){
+if(message.includes("hello")||message.includes("hello siri") ||message.includes("hi siri")){
   speak("Hello Sir,What can i help You?")
 }
 else if(message.includes("who are you")||message.includes("hu r u")){
@@ -92,6 +92,11 @@ else if(message.includes("what is date")){
   let date= new Date().toLocaleString(undefined,{day:"numeric",month:"short"})
   speak(date)
 }
+else if(message.includes("open mysql") || message.includes("open phpmyadmin") || message.includes("open php my admin")|| message.includes("open my sequel")){
+  speak("Opening MySQL...");
+  window.open("http://localhost/phpmyadmin", "_blank");
+}
+
 else{
   let finalresult = `this is what i found on internet regarding ${message.replace('siri','')}`
   speak(finalresult)
